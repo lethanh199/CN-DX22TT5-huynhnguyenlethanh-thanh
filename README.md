@@ -1,25 +1,42 @@
-# CN-DX22TT5-huynhnguyenlethanh-thanh
-# Tên đồ án: Xây dựng website mua bán đồ gỗ qua sử dụng
+# 🪑 Website Mua Bán Đồ Gỗ Qua Sử Dụng
 
-## Sinh viên thực hiện
-- Họ tên: Huỳnh Nguyễn Lê Thanh
-- MSSV: 170122196
-- Lớp: DX22TT5
+Đây là dự án xây dựng một website đơn giản cho phép người dùng đăng tin, tìm kiếm, và mua bán đồ gỗ cũ. Website được xây dựng bằng PHP và MySQL.
 
-## Công nghệ sử dụng
-- ASP.NET MVC
-- Bootstrap 5
-- SQL Server
+---
 
-## Mô tả
-Xây dựng website cho phép người dung trao đổi và mua bán đồ gỗ đã qua sử dụng trực tuyến, quản lý đơn hàng và thống kê doanh thu.
+## 🚀 Chức năng chính
 
-## Hướng dẫn cài đặt
-1. Clone repo: `git clone https://github.com/lethanh199/CN-DX22TT5-huynhnguyenlethanh-thanh.git`
-2. Mở bằng Visual Studio
-3. Chạy ứng dụng
+- 🧾 Đăng ký / đăng nhập tài khoản người dùng
+- 🪑 Xem danh sách và chi tiết sản phẩm
+- 🛒 Thêm sản phẩm vào giỏ hàng
+- 💳 Thanh toán và tạo đơn hàng
+- 🛠️ Trang quản trị để thêm, sửa sản phẩm
+- 🔒 Phân quyền người dùng (admin / user)
 
-## Tiến độ
-Tiến độ sẽ được cập nhật trong thư mục `progress-report/`.
+---
 
+## 🗂️ Cấu trúc thư mục
 
+do-go-cu-website/
+├── index.php # Trang chủ
+├── product_detail.php # Chi tiết sản phẩm
+├── login.php # Đăng nhập
+├── register.php # Đăng ký
+├── cart.php # Giỏ hàng
+├── checkout.php # Thanh toán
+├── config.php # Kết nối CSDL
+├── header.php # Header dùng chung
+├── footer.php # Footer dùng chung
+├── css/style.css # Giao diện
+├── admin/
+│ ├── index.php # Quản lý sản phẩm
+│ ├── add_product.php # Thêm sản phẩm
+│ └── edit_product.php # Sửa sản phẩm
+
+## ⚙️ Cài đặt và triển khai
+
+### 🔧 Yêu cầu hệ thống
+
+- PHP >= 7.4
+- MySQL hoặc MariaDB
+- Web Server (Apache hoặc XAMPP, Laragon, v.v.)
