@@ -32,9 +32,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
 
     <div class="products">
         <?php while ($row = $products->fetch_assoc()): ?>
+             <?php
+                $image = $row['image'];
+                if (filter_var($image, FILTER_VALIDATE_URL)) {
+                    $imageSrc = $image;
+                } else {
+                    $imageSrc = 'img/' . $image;
+                }
+            ?>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="img/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>">
+                    <img src="<?= htmlspecialchars($imageSrc) ?>" alt="<?= htmlspecialchars($row['title']) ?>">
                 </div>
                 <h3><?= htmlspecialchars($row['title']) ?></h3>
                 <p><?= htmlspecialchars($row['category']) ?></p>

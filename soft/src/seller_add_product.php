@@ -2,7 +2,7 @@
 session_start();
 require_once 'includes/config.php';
 
-// Kiểm tra đăng nhập và vai trò người bán
+
 if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'seller') {
     header('Location: login.php');
     exit();
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $price = (float) $_POST['price'];
     $category = (int) $_POST['category'];
-    $image = mysqli_real_escape_string($conn, $_POST['image']); // giả sử nhập URL
+    $image = mysqli_real_escape_string($conn, $_POST['image']);
     $user_id = $_SESSION['user_id'];
 
     $sql = "INSERT INTO products (title, description, price, image, category_id, user_id, approved)

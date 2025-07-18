@@ -15,6 +15,7 @@ if (isset($_POST['add'])) {
     $desc = $conn->real_escape_string($_POST['description']);
     $price = (float)$_POST['price'];
     $image = $conn->real_escape_string($_POST['image']);
+    $image = trim($_POST['image']);
     $category_id = (int)$_POST['category'];
     $user_id = $_SESSION['user_id']; 
 

@@ -2,7 +2,6 @@
 session_start();
 require_once 'includes/config.php';
 
-// Kiểm tra đăng nhập và quyền người bán
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'seller') {
     die("Lỗi: user_id không tồn tại trong session.");
     header('Location: login.php');
@@ -10,9 +9,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'seller') {
 }
 
 
-$user_id = $_SESSION['user_id']; // Lấy ID người bán
+$user_id = $_SESSION['user_id']; 
 
-// Truy vấn danh sách sản phẩm của người dùng này
 $query = "SELECT p.*, c.name AS category_name 
           FROM products p 
           JOIN categories c ON p.category_id = c.id 
